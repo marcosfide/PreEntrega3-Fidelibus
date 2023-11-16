@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Preentrega 1 - Fidelibus</title>
+    <title>Preentrega 3 - Fidelibus</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Preentrega 1 - Fidelibus</h1>
+    <h1>Preentrega 3 - Fidelibus</h1>
 
     <h2>Servicios Community Manager</h2>
 
@@ -38,7 +39,42 @@
         <li>Sesión C- En caso de querer adquirir ambos servicios se aplica un 20% de descuento - <b>Valor: 44usd</b></li>
     </ul>
 
+    <div class="row">
+        <div class="col-12 col-sm-6">
+            <input type="text" class="form-control mb-3" autocomplete="off" id="buscarServicio" placeholder="Ingrese nombre de servicio"/>
+        </div>
+        <div class="col-12 col-sm-6">
+            <select class="form-control" id="selectOrden">
+                <option value="todos">Seleccionar orden</option>
+                <option value="serviciosRedes">Servicios de manejo de Redes</option>
+                <option value="serviciosContenido">Servicios de producción de contenido(fotos y videos)</option>
+                <option value="precioCreciente">De menor a mayor Precio</option>
+                <option value="precioDecreciente">De mayor a menor Precio</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="row" id="contenedor">
+
+    </div>
+    <div id="carrito">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Tipo</th>
+                    <th>Precio</th>
+                    <th>Eliminar</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
 
     <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
