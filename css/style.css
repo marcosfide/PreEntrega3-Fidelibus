@@ -9629,7 +9629,8 @@ footer .container-footer-volver {
 
 .contratar {
   max-width: 70rem;
-  margin: auto; }
+  margin: auto;
+  text-align: center; }
   .contratar .contratar-servicios {
     margin: auto;
     background-color: #F2CEAE;
