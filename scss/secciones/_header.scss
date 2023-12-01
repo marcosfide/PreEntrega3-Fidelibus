@@ -1,0 +1,41 @@
+/*  Estilos del header  */
+@import './recursos/colores';
+
+header {
+  .container-header {
+    display: flex;
+    min-height: 90px;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    .name-menu {
+      margin: 2rem 0 1rem 3rem;
+      .nombre-principal {
+        display: none;
+      }
+      .nav {
+        li {
+          ul {
+            background-color: $color-fondo !important;
+          }
+        }
+      }
+    }
+    & .img-header {
+      margin: -20px 10px;
+      height: 150px;
+    }
+  }
+}
+
+@media (min-width: 500px) {
+  header .container-header {
+    flex-direction: row;
+  }
+  .container-header .name-menu {
+    display: inline;
+    margin: 2rem 0 1rem 3rem;
+  }
+  & .nombre-principal {
+    display: inline !important;
+  }
+}

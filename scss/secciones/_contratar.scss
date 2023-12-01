@@ -1,0 +1,56 @@
+.contratar{
+
+    max-width: 70rem;
+    margin: auto;
+
+    .contratar-servicios{
+        margin: auto;
+        background-color: $color2;
+        border: 2px solid #333;
+        border-radius: 10px;
+        padding: 30px;
+        text-align: center;
+
+        .inputs{
+
+
+            .input-buscador{
+                width: auto;
+
+                input{
+                    background-color: #00000066;
+                }
+            }
+            .input-select{
+                width: auto;
+
+                select{
+                    background-color: #00000066;
+                }
+            }
+        }
+        .tarjeta-plan{
+            justify-content: center;
+            margin: auto;
+            div{
+                div{
+                    margin: auto;
+                    background-color: $color3;
+                    border-radius: 10px;
+                    padding: 30px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+
+    .carrito{
+        margin: auto;
+        background-color: $color3;
+        border: 2px solid #333;
+        border-radius: 10px;
+        padding: 30px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="community manager, redes sociales, contenido, fotos, videos, edición, marketing digital, instagram, contacto, mail">
+    <meta name="description" content="En contactos tendrás acceso a contactarme y poder pedir tu presupuesto">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/8f5c9daf85.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Contactos | Sofía Cassone</title>
+    <link rel="icon" href="../img/logo-SofiCassone.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <div class="container-header">
+            <div class="name-menu">
+                <div class="nombre-principal">
+                    <h1>Sofía Cassone</h1>
+                </div>
+                <nav class="navbar navbar-expand-sm">
+                    <div class="container-fluid">
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav nav">
+                          <a class="nav-link" href="../index.html">Inicio</a>
+                          <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Trabajos
+                                </a>
+                                <ul class="dropdown-menu bg-transparent">
+                                    <a class="nav-link" href="./experiencia.html">Experiencia profesional</a>
+                                    <a class="nav-link" href="./clientesTrabajos.html">Clientes y Trabajos</a>
+                                </ul>
+                            </li>
+                          <a class="nav-link" href="./formacion.html">Formación</a>
+                          <a class="nav-link" href="./sobreMi.html">Más sobre mí</a>
+                          <a class="nav-link" href="./contratar.html">Contratar</a>
+                          <a class="nav-link" href="./contactos.html">Contactos</a>
+                        </div>
+                      </div>
+                    </div>
+                </nav>
+            </div>
+            <div>
+                <img src="../img/logo-SofiCassone.png" alt="logoSofiCassone" class="img-header">
+            </div>
+        </div>
+    </header>
+
+    <div class="contratar">
+        <div class="contratar-servicios my-3">
+            <div class="row inputs">
+                <div class="col-12 col-sm-6 mx-2 input-buscador">
+                    <input type="text" class="form-control mb-3" autocomplete="off" id="buscarServicio" placeholder="Ingrese nombre de servicio"/>
+                </div>
+                <div class="col-12 col-sm-6 mx-2 input-select">
+                    <select class="form-control" id="selectOrden">
+                        <option value="todos">Seleccionar orden</option>
+                        <option value="serviciosRedes">Servicios de manejo de Redes</option>
+                        <option value="serviciosContenido">Servicios de producción de contenido(fotos y videos)</option>
+                        <option value="precioCreciente">De menor a mayor Precio</option>
+                        <option value="precioDecreciente">De mayor a menor Precio</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row tarjeta-plan" id="contenedor">
+
+            </div>
+        </div>
+
+        <div id="carrito" class="carrito">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Tipo</th>
+                        <th>Precio</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="container-footer-contactos">
+            <div class="redes">
+                <h4>Mis redes</h4>
+                <ul class="redes">
+                    <li><a href="https://www.instagram.com/creando.consofi/" target="_blank"><i class="fa-brands fa-instagram" style="color: #000000; padding-right: 5px;"></i>Instagram</a></li>
+                    <li><a href="https://www.linkedin.com/in/sofia-cassone-24b192291/" target="_blank"><i class="fa-brands fa-linkedin" style="color: #000000; padding-right: 5px;"></i>LinkedIn</a></li>
+                </ul>
+            </div>
+            <div class="footer-contactos">
+                <h4>Contactos</h4>
+                <ul class="footer-contactos">
+                    <li><a href="mailto:sof.cassone@gmail.com"><i class="fa-regular fa-envelope" style="color: #000000; padding-right: 5px;"></i>Email</a></li>
+                    <li></i><a href="https://api.whatsapp.com/send?phone=5493415495096" target="_blank"><i class="fa-brands fa-whatsapp" style="color: #000000; padding-right: 5px;"></i>WhatsApp</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container-footer-volver">
+            <a href="../index.html" class="volver-a-inicio">Volver al inicio</a>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="../js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

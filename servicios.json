@@ -1,0 +1,32 @@
+[
+    {
+        "nombre":"Manejo de Redes: Plan A",
+        "tipo":"redes",
+        "caracteristicas":"Incluye 9 publicaciones mensuales en el feed (foto, video o reel) + historias 4 dias a la semana (maximo 3 por dia).<br>- Incluye diseño de publicaciones/historias.<br>- No incluye sesión de fotos. Se utilizará material fotográfico que dispone el cliente o se acordaran sesiones de producción de contenido",
+        "precio": 55
+    },
+    {
+        "nombre":"Manejo de Redes: Plan B",
+        "tipo":"redes",
+        "caracteristicas":"Incluye 12 publicaciones mensuales en el feed (foto, video o reel) + historias 6 días a la semana (máximo 3 por día).<br>- Incluye diseño de publicaciones/historias.<br>- No incluye sesión de fotos. Se utilizará material fotográfico que dispone el cliente o se acordaran sesiones de producción de contenido",
+        "precio": 65
+    },
+    {
+        "nombre": "Produccion de contenido A",
+        "tipo": "contenido",
+        "caracteristicas": "Sesión de fotos, se entregan entre 50 y 100 imagenes. Duración aproximada 3hs",
+        "precio": 25
+    },
+    {
+        "nombre": "Produccion de contenido B",
+        "tipo": "contenido",
+        "caracteristicas": "Sesión de reels, se entregan entre 8 y 10 videos editados",
+        "precio": 30
+    },
+    {
+        "nombre": "Produccion de contenido C",
+        "tipo": "contenido",
+        "caracteristicas": "En caso de querer adquirir ambos servicios(Sesion A y B, con sesión de fotos y reels) se aplica un 20% de descuento",
+        "precio": 44
+    }
+]

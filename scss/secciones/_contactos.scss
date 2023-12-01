@@ -1,0 +1,47 @@
+/*  Contactos  */
+@import './recursos/colores';
+
+.contactos {
+  max-width: none;
+  .form {
+    background-color: $color3;
+    border: 2px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    margin: auto;
+    margin-top: 60px;
+    width: 80vw;
+    min-width: 18rem;
+    input{
+      background-color: $color-fondo;
+    }
+    textarea {
+      width: -webkit-fill-available;
+      background-color: $color-fondo;
+    }
+  }
+}
+
+@media (min-width: 775px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "area-text area-form"
+      "area-text area-form";
+    .area-text {
+      grid-area: area-text;
+    }
+    .area-form {
+      grid-area: area-form;
+      .form {
+        width: 24rem;
+      }
+    }
+  }
+}

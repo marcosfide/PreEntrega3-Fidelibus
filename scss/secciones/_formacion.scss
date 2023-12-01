@@ -1,0 +1,60 @@
+/*  Formacion  */
+@import './recursos/animaciones';
+.main .formacion {
+  text-align: center;
+  display: inline;
+  .container-certificaciones {
+    display: flex;
+    justify-content: space-around;
+    align-content: flex-end;
+    flex-wrap: wrap;
+    .container-certificacion {
+      background-color: $color3;
+      border: 2px solid #333;
+      border-radius: 10px;
+      margin: 50px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      max-width: 350px;
+      min-height: 150px;
+      transition: all 0.2s;
+      position: relative;
+    }
+    .container-certificacion:hover{
+      scale: 1.08;
+    }
+
+    .uno{
+        animation: aparicionElementos;
+        animation-duration: 2s;
+        animation-timing-function: ease;
+        animation-delay: 0.5s;
+    }
+    .dos{
+        animation: aparicionElementos;
+        animation-duration: 2.5s;
+        animation-timing-function: ease;
+        animation-delay: 0.5s;
+    }
+    .tres{
+        animation: aparicionElementos;
+        animation-duration: 3s;
+        animation-timing-function: ease;
+        animation-delay: 0.5s;
+    }
+    .cuatro{
+        animation: aparicionElementos;
+        animation-duration: 3.5s;
+        animation-timing-function: ease;
+        animation-delay: 0.5s;
+    }
+    .cinco{
+        animation: aparicionElementos;
+        animation-duration: 4s;
+        animation-timing-function: ease;
+        animation-delay: 0.5s;
+    }
+  }
+}

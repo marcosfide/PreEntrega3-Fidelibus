@@ -1,0 +1,25 @@
+/*ORDEN DE IMPORTACION: TIPOGRAFIAS; VARIABLES; COLORES; RESET; SECCIONES*/
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+/* TIPOGRAFIA */
+@import './secciones/recursos/fuentes';
+
+/* VARIABLES */
+@import './secciones/recursos/animaciones';
+/* COLORES */
+@import './secciones/recursos/colores';
+/* RESET */
+@import './secciones/recursos/reset';
+/* BODY EN GENERAL */
+@import './secciones/body';
+
+/* SECCIONES */
+@import './secciones/header';
+@import './secciones/footer';
+@import './secciones/index';
+@import './secciones/experiencia';
+@import './secciones/clientesTrabajos';
+@import './secciones/formacion';
+@import './secciones/sobreMi';
+@import './secciones/contactos';
+@import './secciones/contratar';

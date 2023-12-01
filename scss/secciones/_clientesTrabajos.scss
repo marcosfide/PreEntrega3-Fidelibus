@@ -1,0 +1,59 @@
+/* Clientes y trabajos */
+
+.main .trabajos {
+  text-align: center;
+  .container-cliente {
+    background-color: $color3;
+    border: 2px solid #333;
+    border-radius: 10px;
+    max-width: 70rem;
+    margin: 1.5rem;
+    position: relative;
+    .logo-empresa {
+      width: 120px;
+    }
+    .container-ejemplos {
+      display: flex;
+      justify-content: space-around;
+      margin: 5px;
+      padding: 5px;
+      border-style: groove;
+      border-radius: 5px;
+      flex-wrap: wrap;
+      .ejemplo-trabajo {
+        width: 120px;
+        border-radius: 5px;
+        transition: all 0.2s;
+      }
+      .ejemplo-trabajo:hover{
+        scale: 1.08;
+        border-radius: 2px;
+      }
+    }
+  }
+  .uno{
+    animation: aparicionElementos;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 0.5s;
+  }
+  .dos{
+      animation: aparicionElementos2;
+      animation-duration: 4s;
+      animation-timing-function: ease;
+      animation-delay: 0.5s;
+  }
+  .tres{
+      animation: aparicionElementos;
+      animation-duration: 6s;
+      animation-timing-function: ease;
+      animation-delay: 0.5s;
+  }
+}
+@media (min-width: 1115px) {
+  .main .trabajos {
+    .container-cliente {
+      margin: 2rem auto;
+    }
+  }
+}

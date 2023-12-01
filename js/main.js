@@ -104,7 +104,7 @@ function eliminarServicio(servicio){
     }
 }
 
-function obtenerProductosEnLS(){
+function obtenerServiciosEnLS(){
 
     carrito = JSON.parse(localStorage.getItem('carrito'));
 
@@ -134,18 +134,73 @@ function guardarServicioEnLS(servicio){
         const existeServicioContenidoBasico = carrito.some(servicio => servicio.nombre === 'Produccion de contenido A' || servicio.nombre === 'Produccion de contenido B');
 
         if(existeServicioEnCarrito){
-            alert('El servicio ya fue agregado al carrito');
+            Toastify({
+                text: "El servicio ya fue agregado al carrito",
+                duration: 4000,
+                close: true,
+                gravity: "top",
+                position: "right",
+                stopOnFocus: true,
+                style: {
+                  background: "#fd4343db",
+                  borderRadius: "5px",
+                },
+              }).showToast();
         }else if(existeRedes && servicio.tipo === 'redes') {
-            alert('Ya existe un servicio del tipo redes en el carrito. Si desea cambiar el plan a uno con mayor o menor cantidad de publicaciones, elimine del carrito el plan no deseado y vuelva a agregar el que desea contratar');
+            Toastify({
+                text: 'Ya existe un servicio del tipo redes en el carrito. Si desea cambiar el plan a uno con mayor o menor cantidad de publicaciones, elimine del carrito el plan no deseado y vuelva a agregar el que desea contratar',
+                duration: 4000,
+                close: true,
+                gravity: "top",
+                position: "right",
+                stopOnFocus: true,
+                style: {
+                  background: "#fd4343db",
+                  borderRadius: "5px",
+                },
+              }).showToast();
         }else if(servicio.tipo === 'contenido' && existeServicioContenidoCompleto){
-            alert('Ya existe un servicio del tipo contenido en el carrito que contempla el servicio que ud desea agregar');
+            Toastify({
+                text: 'Ya existe un servicio del tipo contenido en el carrito que contempla el servicio que ud desea agregar',
+                duration: 4000,
+                close: true,
+                gravity: "top",
+                position: "right",
+                stopOnFocus: true,
+                style: {
+                  background: "#fd4343db",
+                  borderRadius: "5px",
+                },
+              }).showToast();
 
         }else if(existeServicioContenidoBasico && servicio.nombre === 'Produccion de contenido C'){
-            alert('Ya existe un servicio del tipo contenido en el carrito que contempla el servicio que ud desea agregar. Si desea cambiar de servicio, elimine del carrito el servicio que no desea contratar y seleccione uno nuevo');
+            Toastify({
+                text: 'Ya existe un servicio del tipo contenido en el carrito que contempla el servicio que ud desea agregar. Si desea cambiar de servicio, elimine del carrito el servicio que no desea contratar y seleccione uno nuevo',
+                duration: 4000,
+                close: true,
+                gravity: "top",
+                position: "right",
+                stopOnFocus: true,
+                style: {
+                  background: "#fd4343db",
+                  borderRadius: "5px",
+                },
+              }).showToast();
 
         }else{
             carrito.push(servicioAgregar);
-            alert(`El servicio ${servicio.nombre} con un valor de ${servicio.precio}usd fue agregado al carrito`);
+            Toastify({
+                text: `El servicio ${servicio.nombre} con un valor de ${servicio.precio}usd fue agregado al carrito`,
+                duration: 4000,
+                close: true,
+                gravity: "top",
+                position: "right",
+                stopOnFocus: true,
+                style: {
+                  background: "#5ace5ed6",
+                  borderRadius: "5px",
+                },
+              }).showToast();
         }
 
     }
@@ -237,37 +292,26 @@ function renderizarServicios(servicios){
     }
 }
 
+async function obtenerServicios(){
+    const response = await fetch('/servicios.json');
+    const responseJson = await response.json();
 
-// Objetos
-
-class Servicio {
-    constructor(nombre, tipo, caracteristicas, precio) {
-        this.nombre = nombre;
-        this.tipo = tipo;
-        this.caracteristicas = caracteristicas;
-        this.precio = precio;
-    }
+    listaDeServicios.push(...responseJson);
 }
 
 
 // VARIABLES
 
+const listaDeServicios = [];
 let carrito = [];
 
 // INICIO DEL CÓDIGO
 
-const listaDeServicios = [
-    new Servicio('Manejo de Redes: Plan A', 'redes','- Incluye 9 publicaciones mensuales en el feed (foto, video o reel) + historias 4 dias a la semana (maximo 3 por dia).<br>- Incluye diseño de publicaciones/historias.<br>- No incluye sesión de fotos. Se utilizará material fotográfico que dispone el cliente o se acordaran sesiones de producción de contenido', 55),
-    new Servicio('Manejo de Redes: Plan B', 'redes','- Incluye 12 publicaciones mensuales en el feed (foto, video o reel) + historias 6 días a la semana (máximo 3 por día).<br>- Incluye diseño de publicaciones/historias.<br>- No incluye sesión de fotos. Se utilizará material fotográfico que dispone el cliente o se acordaran sesiones de producción de contenido' ,  65),
-    new Servicio('Produccion de contenido A', 'contenido','- Sesión de fotos, se entregan entre 50 y 100 imagenes. Duración aproximada 3hs', 25),
-    new Servicio('Produccion de contenido B', 'contenido', '- Sesión de reels, se entregan entre 8 y 10 videos editados', 30),
-    new Servicio('Produccion de contenido C', 'contenido', '- En caso de querer adquirir ambos servicios(Sesion A y B, con sesión de fotos y reels) se aplica un 20% de descuento', 44),
-];
 
 
-renderizarServicios(listaDeServicios);
-inicializarInput();
-inicializarSelect();
-obtenerProductosEnLS()
-
-
+obtenerServicios().then(() => {
+    renderizarServicios(listaDeServicios);
+    inicializarInput();
+    inicializarSelect();
+    obtenerServiciosEnLS();
+});
